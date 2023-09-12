@@ -1,1 +1,1 @@
-# FLAC2PCM
+# FLAC-recode
