@@ -10,8 +10,10 @@ def trans(path, savepath):
     log.write('---------- Start ----------' + '\n')
 
     for allDir in pathDir:
-        saveDir = allDir.replace('.flac', '_recode.flac')
+        saveDir = allDir
+        saveDir = saveDir.replace('.flac', '_recode.flac')
         saveDir = saveDir.replace('.mp3', '_recode.flac')
+        saveDir = saveDir.replace('.m4a', '_recode.flac')
         cmd = 'ffmpeg -y -i "' + path + allDir + '" "' + savepath + saveDir + '"'
         log.write('$ Time: ' + time.strftime("%a %b %d %H:%M %Y", time.localtime()) + '\n')
         log.write('# ' + cmd + ' Start!' + '\n')
